@@ -1,11 +1,307 @@
-const dadosGoverno = JSON.parse("[{\"orgao\":\"MEC\",\"data\":\"01/01/2024\",\"valor\":500.00,\"status\":\"sucesso\"},{\"orgao\":\"Ministério da Saúde\",\"data\":\"03/01/2024\",\"valor\":750.00,\"status\":\"sucesso\"},{\"orgao\":\"MEC\",\"data\":\"05/01/2024\",\"valor\":1000.00,\"status\":\"falha\",\"motivo\":\"falta de documentação\"},{\"orgao\":\"Ministério da Educação\",\"data\":\"08/01/2024\",\"valor\":600.00,\"status\":\"sucesso\"},{\"orgao\":\"Ministério da Saúde\",\"data\":\"10/01/2024\",\"valor\":900.00,\"status\":\"sucesso\"},{\"orgao\":\"Ministério da Educação\",\"data\":\"12/01/2024\",\"valor\":300.00,\"status\":\"falha\",\"motivo\":\"dados inválidos\"},{\"orgao\":\"Ministério da Saúde\",\"data\":\"15/01/2024\",\"valor\":1200.00,\"status\":\"sucesso\"},{\"orgao\":\"MEC\",\"data\":\"17/01/2024\",\"valor\":800.00,\"status\":\"sucesso\"},{\"orgao\":\"Ministério da Educação\",\"data\":\"20/01/2024\",\"valor\":400.00,\"status\":\"sucesso\"},{\"orgao\":\"MEC\",\"data\":\"22/01/2024\",\"valor\":1100.00,\"status\":\"falha\"}]")
+const dadosGoverno = JSON.stringify(
+  [
+    {
+        "orgao": "Polícia Civil",
+        "data": "01/01/2024",
+        "valor": 5500.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Polícia Rodoviária Federal",
+        "data": "02/01/2024",
+        "valor": 6000.00,
+        "status": "falha",
+        "motivo": "Problemas técnicos"
+    },
+    {
+        "orgao": "Polícia Militar",
+        "data": "03/01/2024",
+        "valor": 4500.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Corpo de Bombeiros",
+        "data": "04/01/2024",
+        "valor": 7000.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Guarda Municipal",
+        "data": "05/01/2024",
+        "valor": 3500.00,
+        "status": "falha",
+        "motivo": "Documentação incompleta"
+    },
+    {
+        "orgao": "Receita Federal",
+        "data": "06/01/2024",
+        "valor": 8000.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Ministério Público",
+        "data": "07/01/2024",
+        "valor": 9000.00,
+        "status": "falha",
+        "motivo": "Erro no sistema"
+    },
+    {
+        "orgao": "Defesa Civil",
+        "data": "08/01/2024",
+        "valor": 4000.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Detran",
+        "data": "09/01/2024",
+        "valor": 5000.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Polícia Federal",
+        "data": "10/01/2024",
+        "valor": 6500.00,
+        "status": "falha",
+        "motivo": "Falta de recursos"
+    },
+    {
+        "orgao": "Ibama",
+        "data": "11/01/2024",
+        "valor": 5500.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Anvisa",
+        "data": "12/01/2024",
+        "valor": 6000.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Inmetro",
+        "data": "13/01/2024",
+        "valor": 3000.00,
+        "status": "falha",
+        "motivo": "Dados incorretos"
+    },
+    {
+        "orgao": "Cetesb",
+        "data": "14/01/2024",
+        "valor": 7000.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Susep",
+        "data": "15/01/2024",
+        "valor": 8000.00,
+        "status": "falha",
+        "motivo": "Problemas técnicos"
+    },
+    {
+        "orgao": "Polícia Civil",
+        "data": "16/01/2024",
+        "valor": 5200.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Polícia Rodoviária Federal",
+        "data": "17/01/2024",
+        "valor": 6100.00,
+        "status": "falha",
+        "motivo": "Erro humano"
+    },
+    {
+        "orgao": "Polícia Militar",
+        "data": "18/01/2024",
+        "valor": 4600.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Corpo de Bombeiros",
+        "data": "19/01/2024",
+        "valor": 7100.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Guarda Municipal",
+        "data": "20/01/2024",
+        "valor": 3600.00,
+        "status": "falha",
+        "motivo": "Sistema fora do ar"
+    },
+    {
+        "orgao": "Receita Federal",
+        "data": "21/01/2024",
+        "valor": 8100.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Ministério Público",
+        "data": "22/01/2024",
+        "valor": 9100.00,
+        "status": "falha",
+        "motivo": "Recursos insuficientes"
+    },
+    {
+        "orgao": "Defesa Civil",
+        "data": "23/01/2024",
+        "valor": 4100.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Detran",
+        "data": "24/01/2024",
+        "valor": 5100.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Polícia Federal",
+        "data": "25/01/2024",
+        "valor": 6600.00,
+        "status": "falha",
+        "motivo": "Problemas técnicos"
+    },
+    {
+        "orgao": "Ibama",
+        "data": "26/01/2024",
+        "valor": 5600.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Anvisa",
+        "data": "27/01/2024",
+        "valor": 6100.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Inmetro",
+        "data": "28/01/2024",
+        "valor": 3100.00,
+        "status": "falha",
+        "motivo": "Dados incorretos"
+    },
+    {
+        "orgao": "Cetesb",
+        "data": "29/01/2024",
+        "valor": 7100.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Susep",
+        "data": "30/01/2024",
+        "valor": 8100.00,
+        "status": "falha",
+        "motivo": "Problemas técnicos"
+    },
+    {
+        "orgao": "Polícia Civil",
+        "data": "31/01/2024",
+        "valor": 5300.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Polícia Rodoviária Federal",
+        "data": "01/01/2024",
+        "valor": 6200.00,
+        "status": "falha",
+        "motivo": "Erro humano"
+    },
+    {
+        "orgao": "Polícia Militar",
+        "data": "02/01/2024",
+        "valor": 4700.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Corpo de Bombeiros",
+        "data": "03/01/2024",
+        "valor": 7200.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Guarda Municipal",
+        "data": "04/01/2024",
+        "valor": 3700.00,
+        "status": "falha",
+        "motivo": "Sistema fora do ar"
+    },
+    {
+        "orgao": "Receita Federal",
+        "data": "05/01/2024",
+        "valor": 8200.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Ministério Público",
+        "data": "06/01/2024",
+        "valor": 9200.00,
+        "status": "falha",
+        "motivo": "Recursos insuficientes"
+    },
+    {
+        "orgao": "Defesa Civil",
+        "data": "07/01/2024",
+        "valor": 4200.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Detran",
+        "data": "08/01/2024",
+        "valor": 5200.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Polícia Federal",
+        "data": "09/01/2024",
+        "valor": 6700.00,
+        "status": "falha",
+        "motivo": "Problemas técnicos"
+    },
+    {
+        "orgao": "Ibama",
+        "data": "10/01/2024",
+        "valor": 5700.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Anvisa",
+        "data": "11/01/2024",
+        "valor": 6200.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Inmetro",
+        "data": "12/01/2024",
+        "valor": 3200.00,
+        "status": "falha",
+        "motivo": "Dados incorretos"
+    },
+    {
+        "orgao": "Cetesb",
+        "data": "13/01/2024",
+        "valor": 7200.00,
+        "status": "sucesso"
+    },
+    {
+        "orgao": "Susep",
+        "data": "14/01/2024",
+        "valor": 8200.00,
+        "status": "falha",
+        "motivo": "Problemas técnicos"
+    }
+]
+
+)
+ 
+const transacoesValidas = dadosGoverno.filter(transacao => {
+  return(transacao.status === "sucesso" || transacao.status === "falha");
+})
 
 // 1 - A quantidade total de repasses
-console.log("Total de repasses processados: " + dadosGoverno.length)
+console.log("Total de repasses processados: " + transacoesValidas.length)
 
 
 // 2 - Análise de Transações por status
-console.log("\n***************** Quantidade total Repasses bem sucedidos *****************\n")
+console.log("n***************** Quantidade total Repasses bem sucedidos *****************n")
 const quantidadesSucedidos = dadosGoverno.filter(elemento => elemento.status === 'sucesso')
 console.log(`Quantidade total de repasses bem sucedidos: ${quantidadesSucedidos.length}`)
 
@@ -17,7 +313,7 @@ console.log(`Quantidade total de repasses bem sucedidos do orgão Ministério da
 
 const quantidadeSucedidosOrgaoMS = quantidadesSucedidos.filter(elemento => elemento.orgao === 'Ministério da Saúde')
 console.log(`Quantidade total de repasses bem sucedidos do orgão Ministério da Saúde: ${quantidadeSucedidosOrgaoMS.length}`)
-console.log("\n***************** Valor total de repasses bem sucedidos *****************\n")
+console.log("n***************** Valor total de repasses bem sucedidos *****************n")
 const valorTotalSucedidos = dadosGoverno
 .filter(elemento => elemento.status === 'sucesso')
 .reduce((acumulador, elemento) => acumulador + elemento.valor, 0)
@@ -38,7 +334,7 @@ const valorTotalSucedidosOrgaoMS = dadosGoverno
 .reduce((acumulador, elemento) => acumulador + elemento.valor, 0)
 console.log(`Valor total de repasses Sucedidos do orgão Ministério da Saúde: ${valorTotalSucedidosOrgaoMS.toFixed(2)}`)
 
-console.log("\n***************** Quantidade total Repasses com falhas *****************\n")
+console.log("n***************** Quantidade total Repasses com falhas *****************n")
 const quantidadesFalhas = dadosGoverno.filter(elemento => elemento.status === 'falha')
 console.log(`Quantidade total de repasses com falhas: ${quantidadesFalhas.length}`)
 
@@ -54,7 +350,7 @@ console.log(`Quantidade total de repasses com falhas do orgão Ministério da Sa
 const quantidadeFalhasMotivo = dadosGoverno.filter(elemento => elemento.status === 'falha' && elemento.motivo)
 console.log(`Quantidade total de repasses com falhas e com motivo: ${quantidadeFalhasMotivo.length}`)
 
-console.log("\n***************** Valor total de repasses com Falhas *****************\n")
+console.log("n***************** Valor total de repasses com Falhas *****************n")
 const valorTotalFalhas = dadosGoverno
 .filter(elemento => elemento.status === 'falha')
 .reduce((acumulador, elemento) => acumulador + elemento.valor, 0)
@@ -83,10 +379,10 @@ console.log(`Valor total de repasses com falhas e motivo: ${valorTotalFalhasMoti
 // 3 - Estatísticas de Repasses por critérios
 
 const repasseComMaiorValor =  dadosGoverno.sort((elementoA, elementoB) => elementoB.valor - elementoA.valor);
-console.log("\nDetalhes do repasse com maior valor: ", repasseComMaiorValor[0])
+console.log("nDetalhes do repasse com maior valor: ", repasseComMaiorValor[0])
 
 const repasseComMenorValor =  dadosGoverno.sort((elementoA, elementoB) => elementoA.valor - elementoB.valor);
-console.log("\nDetalhes do repasse com menor valor: ", repasseComMenorValor[0])
+console.log("nDetalhes do repasse com menor valor: ", repasseComMenorValor[0])
 
 const frequenciaOrgaos = {};
 
@@ -109,7 +405,7 @@ for (const orgao in frequenciaOrgaos) {
   }
 }
 
-console.log("\nOrgão com mais repasses: ", orgaoMaisFrequente)
+console.log("nOrgão com mais repasses: ", orgaoMaisFrequente)
 
 
 const frequenciaOrgaosSucesso = {};
@@ -133,7 +429,7 @@ for (const orgao in frequenciaOrgaosSucesso) {
   }
 }
 
-console.log("\nOrgão com mais repasses com sucesso: ", orgaoMaisRepassesSucesso )
+console.log("nOrgão com mais repasses com sucesso: ", orgaoMaisRepassesSucesso )
 
 const frequenciaOrgaosFalhas = {};
 
@@ -156,7 +452,7 @@ for (const orgao in frequenciaOrgaosFalhas) {
   }
 }
 
-console.log("\nOrgão com mais repasses com Falhas: ", orgaoMaisRepassesFalhas )
+console.log("nOrgão com mais repasses com Falhas: ", orgaoMaisRepassesFalhas )
 
 // 4 - Apresentanção Automática 
 function buscarTransacoesPorOrgao(orgao) {
@@ -164,7 +460,7 @@ function buscarTransacoesPorOrgao(orgao) {
     const transacoesFiltradas = dadosGoverno.filter(elemento => elemento.orgao === orgao);
   
     if (transacoesFiltradas.length > 0) {
-      console.log(`\nTransações encontradas para o órgão: ${orgao}`);
+      console.log(`nTransações encontradas para o órgão: ${orgao}`);
       transacoesFiltradas.forEach((elemento) => {
         console.log(`  Órgão: ${elemento.orgao}`);
         console.log(`  Status: ${elemento.status}`);
@@ -176,7 +472,7 @@ function buscarTransacoesPorOrgao(orgao) {
         console.log('-----------------------');
       });
     } else {
-      console.log(`\nNenhuma transação encontrada para o órgão: ${orgao}`);
+      console.log(`nNenhuma transação encontrada para o órgão: ${orgao}`);
     }
   }
   
@@ -186,7 +482,7 @@ buscarTransacoesPorOrgao('Ministério da Educação');
 const transacoesSemMotivo = dadosGoverno.filter(elemento => elemento.status === 'falha' && !elemento.motivo )
 
 if(transacoesSemMotivo.length > 0){
-    console.log("\nTransação sem motivo da falha!");
+    console.log("nTransação sem motivo da falha!");
     transacoesSemMotivo.forEach((elemento) => {
         console.log("- Detalhes da transação:");
         console.log(`  Orgão: ${elemento.orgao}`);
