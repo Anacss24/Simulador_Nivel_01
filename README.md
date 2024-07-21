@@ -51,6 +51,7 @@ Implementar um sistema que permita à equipe financeira monitorar e analisar os 
    <li> O sistema deverá exibir detalhes das transações que não foram processadas com sucesso.</li>
  </ol>
  
-## Autor
-**Ana Claudia Santana** - *Desenvolvimento* 
+<p align="center">
+Desenvolvido por *Ana Claudia Santana:orange_heart:
+</p>
  
