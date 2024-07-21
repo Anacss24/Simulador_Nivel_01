@@ -48,10 +48,10 @@ Implementar um sistema que permita à equipe financeira monitorar e analisar os 
  ### 5. Tratamento de erros
   <ul><li>Descrição: É considerado um problema no processamento quando uma transação tem o status "FALHA" mas não tem um valor no campo "MOTIVO DA FALHA"</li></ul>
   <ol>
-   <li> O sistema deverá exibir detalhes das transações que não foram processadas com sucesso.</li>
+   <li> O sistema deverá exibir detalhes das transações que não foram processadas com sucesso.</li><br>
  </ol>
  
 <p align="center">
-Desenvolvido por *Ana Claudia Santana:orange_heart:
+Desenvolvido por <i>Ana Claudia Santana</i> :orange_heart:
 </p>
  
